@@ -114,5 +114,33 @@ python main.py drop_tables
 | etl_timestamp | TIMESTAMP   | Auto-recorded insert time    |
 
 
+## Sample Queries
+
+Here are some example commands you can run using the CLI:
+
+# Fetch and store COVID-19 data for a specific country and date range
+python main.py fetch_data India 2023-01-01 2023-01-31
+
+# Get total confirmed COVID-19 cases for a country
+python main.py query_data total_cases India
+
+# Get total confirmed deaths for a country
+python main.py query_data total_deaths India
+
+# View daily trends (cases or deaths) for a specific country
+python main.py query_data daily_trends India new_cases
+python main.py query_data daily_trends India new_deaths
+
+# View the top 5 most affected countries by total cases
+python main.py query_data top_affected 5
+
+# List all tables in the database
+python main.py list_tables
+
+# Drop all tables (use only if needed)
+python main.py drop_tables
+
+
+
 
 
